@@ -2,6 +2,9 @@
 .NET Core Fruit Preferences API Serves data based on food preferences of the hospital WeLackAutomation, 
 so all their patients can have their favorite foods (although we still lack some automation here and there, tho).
 
+# Build Status
+
+https://circleci.com//gh/pliyosan/fruit-preferences-api.png?circle-token=cccda3c5ba5b7d85d5533c73a8606ac42c8cbb5a
 # Windows user? Try Dockerun.ps1  
 
 `Dockerun.ps1` contains exactly what you need to run containers in Windows. Yeah, 2018 and still sounds a bit weird to do that, right?
