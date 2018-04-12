@@ -1,9 +1,8 @@
 jobs:
     build_and_deploy:
-
         machine:
-        services:
-            - docker
+            services:
+                - docker
 
         steps:
         - run: |
