@@ -1,6 +1,6 @@
 # Fruit Preferences .Net Core Api using Docker
 
-https://circleci.com//gh/pliyosan/fruit-preferences-api.png?circle-token=cccda3c5ba5b7d85d5533c73a8606ac42c8cbb5a
+![Build Status](https://circleci.com//gh/pliyosan/fruit-preferences-api.png?circle-token=cccda3c5ba5b7d85d5533c73a8606ac42c8cbb5a)
 
 # Intro
 .NET Core Fruit Preferences API Serves data based on food preferences of the hospital WeLackAutomation, 
