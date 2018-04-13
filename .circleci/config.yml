@@ -1,11 +1,12 @@
 version: 2
 jobs:
+
    build:
     docker:
       - image: paulinhu/netcore-docker-build
-   steps:
-      - run: dotnet restore 
-      - run: dotnet build 
+    steps:
+        - run: dotnet restore 
+        - run: dotnet build 
 
 workflows:
   version: 2
