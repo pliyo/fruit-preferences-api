@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.26823.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "fruit-preferences-api", "fruit-preferences-api.csproj", "{2E20F230-F6D4-4318-A3BA-8005DEEE6CA7}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2E20F230-F6D4-4318-A3BA-8005DEEE6CA7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2E20F230-F6D4-4318-A3BA-8005DEEE6CA7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2E20F230-F6D4-4318-A3BA-8005DEEE6CA7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2E20F230-F6D4-4318-A3BA-8005DEEE6CA7}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {F40EA7A6-5884-4619-93DF-BC843CCAA08B}
+	EndGlobalSection
+EndGlobal
