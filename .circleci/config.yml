@@ -9,10 +9,10 @@ jobs:
         - run: dotnet restore src
         - run: dotnet build src
         - run: dotnet publish src/fruit-preferences-api.csproj -c Release -f netcoreapp2.0
-        - run: cp Dockerfile src/ruit-preferences-api/bin/Release/netcoreapp2.0/publish/
-        #   docker build --rm --no-cache -t $DOCKER_IMAGE_NAME_WITH_REGISTRY src/Sample.Web.Api/bin/Release/netcoreapp2.0/publish/
-        #   docker login $DOCKER_REGISTRY_URI -u $DOCKER_REGISTRY_SERVER_USERNAME -p $DOCKER_REGISTRY_SERVER_PASSWORD
-        #   docker push $DOCKER_IMAGE_NAME_WITH_REGISTRY
+        - run: cp Dockerfile src/fruit-preferences-api/bin/Release/netcoreapp2.0/publish/
+        - run: docker build --rm --no-cache -t $DOCKER_IMAGE_NAME_WITH_REGISTRY src/Sample.Web.Api/bin/Release/netcoreapp2.0/publish/
+        - run: docker login $DOCKER_REGISTRY_URI -u $DOCKER_REGISTRY_SERVER_USERNAME -p $DOCKER_REGISTRY_SERVER_PASSWORD
+        - run: docker push $DOCKER_IMAGE_NAME_WITH_REGISTRY
 
 workflows:
   version: 2
