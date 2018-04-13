@@ -1,26 +1,11 @@
 version: 2
 jobs:
-    machine:
-        services:
-            - docker
-    build:	  
-    # Build the .NET Core application inside a container and publish to the 'output' folder.	
-        docker run \			
-        --rm=false \			
-        -e AWS_ACCESS_KEY_ID \			
-        -e AWS_SECRET_ACCESS_KEY \			
-        -e CIRCLE_BRANCH \			
-        -v `pwd`/updater:/src \			
-        -w /src/ \			
-        --rm microsoft/dotnet:2-sdk \			
-        bash publish.sh		
-        
-        # Build the Docker image.		
-            docker build -t fruitpreferences .	
-        docker tag storedata-updater:latest $AWS_ACCOUNT_ID.dkr.ecr.us-east-1.amazonaws.com/fruitpreferences 		
-        # Login and push.		
-        `aws ecr get-login --region eu-west-2`		
-        docker push $AWS_ACCOUNT_ID.dkr.ecr.us-east-1.amazonaws.com/fruitpreferences 
+   build:
+    docker:
+      - image: paulinhu/netcore-docker-build
+   steps:
+      - run: dotnet restore 
+      - run: dotnet build 
 
 workflows:
   version: 2
