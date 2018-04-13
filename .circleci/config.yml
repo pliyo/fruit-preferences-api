@@ -5,6 +5,7 @@ jobs:
     docker:
       - image: paulinhu/netcore-docker-build
     steps:
+        - checkout
         - run: dotnet restore src
         - run: dotnet build src
 
