@@ -2,12 +2,7 @@ jobs:
     machine:
         services:
             - docker
-    
-    compile:	  
-    override:	   
-        - make build-and-push
-
-    build-and-push:	  
+    build:	  
     # Build the .NET Core application inside a container and publish to the 'output' folder.	
         docker run \			
         --rm=false \			
@@ -30,5 +25,4 @@ workflows:
   version: 2
   build_and_test:
     jobs:
-      - build-and-push
-      - prod
+      - build
