@@ -4,6 +4,9 @@ jobs:
    build:
     docker:
       - image: paulinhu/netcore-docker-build
+        auth:
+          username: $DOCKER_REGISTRY_SERVER_USERNAME  
+          password: $DOCKER_REGISTRY_SERVER_PASSWORD  
     steps:
         - checkout
         - run: dotnet restore src
@@ -12,7 +15,7 @@ jobs:
         - run: cp src/Dockerfile src/bin/Release/netcoreapp2.0/publish/
         - setup_remote_docker
         - run: docker build --rm --no-cache -t $DOCKER_IMAGE_NAME_WITH_REGISTRY src/bin/Release/netcoreapp2.0/publish/
-        - run: docker login $DOCKER_REGISTRY_URI -u $DOCKER_REGISTRY_SERVER_USERNAME -p $DOCKER_REGISTRY_SERVER_PASSWORD
+        - run: docker login $DOCKER_REGISTRY_URI
         - run: docker push $DOCKER_IMAGE_NAME_WITH_REGISTRY
 
 workflows:
