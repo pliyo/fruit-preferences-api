@@ -11,7 +11,7 @@ jobs:
         - run: dotnet publish src/fruit-preferences-api.csproj -c Release -f netcoreapp2.0
         - run: cp src/Dockerfile src/bin/Release/netcoreapp2.0/publish/
         - setup_remote_docker
-        - run: docker build --rm --no-cache -t $DOCKER_IMAGE_NAME_WITH_REGISTRY src/bin/Release/netcoreapp2.0/publish/
+        - run: docker build --rm --no-cache -t $DOCKER_IMAGE_NAME_WITH_REGISTRY .
         - run: docker login $DOCKER_REGISTRY_URI -u $DOCKER_REGISTRY_SERVER_USERNAME -p $DOCKER_REGISTRY_SERVER_PASSWORD
         - run: docker push $DOCKER_IMAGE_NAME_WITH_REGISTRY
 
