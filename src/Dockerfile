@@ -24,5 +24,8 @@ RUN chown -R fruits:fruits /app
 
 USER fruits
 
-
 ENTRYPOINT ["dotnet", "fruit-preferences-api.dll"]
+
+# USAGE:
+# docker build -t [name] .
+# docker run -d -p 8080:80 --ti [name]
