@@ -16,8 +16,8 @@ You would need .Net Core 3.1 to run it.
 
 # Windows user? Try Dockerun.ps1  
 
-`Dockerun.ps1` contains exactly what you need to run containers in Windows. Yeah, 2018 and still sounds a bit weird to do that, right?
-But it's totally possible! Check [here to read more](https://docs.docker.com/engine/examples/dotnetcore/#view-the-web-page-running-from-a-container)
+`Dockerun.ps1` was developed in 2018 as a way to easily run containers in Windows. 
+Check [here to read more](https://docs.docker.com/engine/examples/dotnetcore/#view-the-web-page-running-from-a-container)
 
 As of today, whenever you use the **Nano Windows Container** and have not updated to the **Windows Creator Update** there is a bug affecting
 how Windows 10 talks to Containers via “NAT” (Network Address Translation). Therefore, you must hit the IP of the container directly.

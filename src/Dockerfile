@@ -14,6 +14,10 @@ FROM mcr.microsoft.com/dotnet/core/aspnet:3.1
 WORKDIR /app
 COPY --from=build-env /app/out .
 
+# Expose 8080 as we are going to be a non-root user
+EXPOSE 8080
+ENV ASPNETCORE_URLS=http://*:8080
+
 # Adds fruits group and user.
 # useradd -r will add a system account
 # A system account is an account that a program/deamon starts and/or uses to run
@@ -28,4 +32,4 @@ ENTRYPOINT ["dotnet", "fruit-preferences-api.dll"]
 
 # USAGE:
 # docker build -t [name] .
-# docker run -d -p 8080:80 --ti [name]
+# docker run -p 8080:80 --ti [name]
